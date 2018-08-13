@@ -60,4 +60,68 @@ NONE
 }
 ```
 
+## Market Data endpoints
+### Order book
+```
+GET /api/v1/depth
+```
+
+**Parameters:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+symbol | STRING | YES |
+limit | INT | NO | Default 100; max 500.
+
+**Response:**
+
+```
+{
+  "lastUpdateId": 45,
+  "bids": [
+    [
+      "1.00007927",     // PRICE
+      "1.00000000"      // QTY
+    ]
+  ],
+  "asks": [
+    [
+      "1.00007926",
+      "1.00000000"
+    ]
+  ]
+}
+```
+
+
+
+### Recent trades list
+```
+GET /api/v1/trades
+```
+Get recent trades (up to last 500).
+
+**Parameters:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ----------- | ------------
+symbol | STRING | YES |
+limit | INT | NO | Defalt 500, max 1000.
+
+**Response:**
+
+```
+[
+  {
+    "id": 42,
+    "price": "0.00006500",
+    "qty": "8.00000000",
+    "time": 1525593971456,
+    "isBuyerMaker": true
+  }
+]
+```
+
+
+
 
