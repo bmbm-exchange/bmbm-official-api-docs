@@ -161,7 +161,7 @@ GET /api/v1/ticker/24hr
 
 Name | Type | Mandatory | Description
 ------------ | ------------ | ----------- | ------------
-symbol | STRING | YES |
+symbol | STRING | NO |
 
 **Response:**
 
@@ -183,6 +183,27 @@ symbol | STRING | YES |
   "takerBuyTotal": "0.05000000",
   "count": 30
 }
+OR
+[
+  {
+    "symbol": "CZRETH",
+    "priceChange": "0.00003000",
+    "priceChangePercent": "50",
+    "weightedAvgPrice": "0.00005438",
+    "lastPrice": "0.00009000",
+    "bidPrice": "0.00007926",
+    "askPrice": "0.00009000",
+    "openPrice": "0.00006000",
+    "highPrice": "0.00009000",
+    "lowPrice": "0.00005401",
+    "volume": "113533.21330000",
+    "total": "6.17348378",
+    "takerBuyVolume": "1000.00000000",
+    "takerBuyTotal": "0.05000000",
+    "count": 30
+  }
+]
+
 ```
 ### 24hr mini ticker price change statistics
 ```
@@ -193,7 +214,7 @@ GET /api/v1/miniticker/24hr
 
 Name | Type | Mandatory | Description
 ------------ | ------------ | ----------- | ------------
-symbol | STRING | YES |
+symbol | STRING | NO |
 
 **Response:**
 
@@ -208,7 +229,21 @@ symbol | STRING | YES |
   "total": "0.05000000", 
   "takerBuyVolume": "1000.00000000", 
   "takerBuyTotal": "0.05000000" 
+}
+OR
+[
+  {
+    "symbol": "CZRETH",
+    "lastPrice": "0.00009000",
+    "openPrice": "0.00006000",
+    "highPrice": "0.00009000",
+    "lowPrice": "0.00005401",
+    "volume": "113533.21330000", 
+    "total": "0.05000000", 
+    "takerBuyVolume": "1000.00000000", 
+    "takerBuyTotal": "0.05000000" 
   }
+]
 ```
 
 
