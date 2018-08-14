@@ -140,15 +140,15 @@ limit | INT | NO | Default 500; max 1000.
 
 ```
 [
-	[
-		"1499040000000", // Open time
-		"0.01634790", // Open
-		"0.80000000", // High
-		"0.01575800", // Low
-		"0.01577100", // Close
-		"148976.11427815", // Volume	
-		"14.11427815" // Taker buy volume
-	]
+  [
+    "1499040000000", // Open time
+    "0.01634790", // Open
+    "0.80000000", // High
+    "0.01575800", // Low
+    "0.01577100", // Close
+    "148976.11427815", // Volume	
+    "14.11427815" // Taker buy volume
+  ]
 ]
 ```
 
@@ -167,40 +167,42 @@ symbol | STRING | YES |
 
 ```
 {
-	"symbol": "CZRETH",
-	"priceChange": "0.00003000",
-	"priceChangePercent": "50",
-	"weightedAvgPrice": "0.00005438",
-	"lastPrice": "0.00009000",
-	"bidPrice": "0.00007926",
-	"askPrice": "0.00009000",
-	"openPrice": "0.00006000",
-	"highPrice": "0.00009000",
-	"lowPrice": "0.00005401",
-	"volume": "113533.21330000",
-	"total": "6.17348378",
-	"takerBuyVolume": "1000.00000000",
-	"takerBuyTotal": "0.05000000",
-	"count": 30
+  "symbol": "CZRETH",
+  "priceChange": "0.00003000",
+  "priceChangePercent": "50",
+  "weightedAvgPrice": "0.00005438",
+  "lastPrice": "0.00009000",
+  "bidPrice": "0.00007926",
+  "askPrice": "0.00009000",
+  "openPrice": "0.00006000",
+  "highPrice": "0.00009000",
+  "lowPrice": "0.00005401",
+  "volume": "113533.21330000",
+  "total": "6.17348378",
+  "takerBuyVolume": "1000.00000000",
+  "takerBuyTotal": "0.05000000",
+  "count": 30
 }
 OR
-[{
-	"symbol": "CZRBTC",
-	"priceChange": null,
-	"priceChangePercent": null,
-	"weightedAvgPrice": null,
-	"lastPrice": null,
-	"bidPrice": null,
-	"askPrice": null,
-	"openPrice": null,
-	"highPrice": null,
-	"lowPrice": null,
-	"volume": null,
-	"total": null,
-	"takerBuyVolume": "1000.00000000",
-	"takerBuyTotal": "0.05000000",
-	"count": 0
-}]
+[
+  {
+   "symbol": "CZRETH",
+   "priceChange": "0.00003000",
+   "priceChangePercent": "50",
+   "weightedAvgPrice": "0.00005438",
+   "lastPrice": "0.00009000",
+   "bidPrice": "0.00007926",
+   "askPrice": "0.00009000",
+   "openPrice": "0.00006000",
+   "highPrice": "0.00009000",
+   "lowPrice": "0.00005401",
+   "volume": "113533.21330000",
+   "total": "6.17348378",
+   "takerBuyVolume": "1000.00000000",
+   "takerBuyTotal": "0.05000000",
+   "count": 30
+ }
+]
 ```
 ### 24hr mini ticker price change statistics
 ```
@@ -217,28 +219,30 @@ symbol | STRING | YES |
 
 ```
 {
-	"symbol": "CZRETH",
-	"lastPrice": "0.00009000",
-	"openPrice": "0.00006000",
-	"highPrice": "0.00009000",
-	"lowPrice": "0.00005401",
-	"volume": "113533.21330000", //基础货币24小时成交量
-	"total": "0.05000000", //计价货币货币24小时成交量
-	"takerBuyVolume": "1000.00000000", //基础货币24小时流入
-	"takerBuyTotal": "0.05000000" //计价货币24小时流入
+  "symbol": "CZRETH",
+  "lastPrice": "0.00009000",
+  "openPrice": "0.00006000",
+  "highPrice": "0.00009000",
+  "lowPrice": "0.00005401",
+  "volume": "113533.21330000", //基础货币24小时成交量
+  "total": "0.05000000", //计价货币货币24小时成交量
+  "takerBuyVolume": "1000.00000000", //基础货币24小时流入
+  "takerBuyTotal": "0.05000000" //计价货币24小时流入
 }
 OR
-[{
-	"symbol": "CZRETH",
-	"lastPrice": "0.00009000",
-	"openPrice": "0.00006000",
-	"highPrice": "0.00009000",
-	"lowPrice": "0.00005401",
-	"volume": "113533.21330000",
-	"total": "0.05000000",
-	"takerBuyVolume": "1000.00000000",
-	"takerBuyTotal": "0.05000000"
-}]
+[
+  {
+    "symbol": "CZRETH",
+    "lastPrice": "0.00009000",
+    "openPrice": "0.00006000",
+    "highPrice": "0.00009000",
+    "lowPrice": "0.00005401",
+    "volume": "113533.21330000",
+    "total": "0.05000000",
+    "takerBuyVolume": "1000.00000000",
+    "takerBuyTotal": "0.05000000"
+  }
+]
 ```
 
 
