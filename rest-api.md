@@ -104,9 +104,9 @@ Get recent trades (up to last 500).
 **Parameters:**
 
 Name | Type | Mandatory | Description
------------- | ------------ | ----------- | ------------
+------------ | ------------ | ------------ | ------------
 symbol | STRING | YES |
-limit | INT | NO | Defalt 500, max 1000.
+limit | INT | NO | Default 500; max 1000.
 
 **Response:**
 
@@ -121,6 +121,126 @@ limit | INT | NO | Defalt 500, max 1000.
   }
 ]
 ```
+
+### Kline
+```
+GET /api/v1/klines
+```
+
+**Parameters:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ----------- | ------------
+symbol | STRING | YES |
+interval | ENUM | YES | 
+since | LONG | NO | 
+limit | INT | NO | Default 500; max 1000.
+
+**Response:**
+
+```
+[
+	[
+		"1499040000000", // Open time
+		"0.01634790", // Open
+		"0.80000000", // High
+		"0.01575800", // Low
+		"0.01577100", // Close
+		"148976.11427815", // Volume	
+		"14.11427815" // Taker buy volume
+	]
+]
+```
+
+### 24hr ticker price change statistics
+```
+GET /api/v1/ticker/24hr
+```
+
+**Parameters:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ----------- | ------------
+symbol | STRING | YES |
+
+**Response:**
+
+```
+{
+	"symbol": "CZRETH",
+	"priceChange": "0.00003000",
+	"priceChangePercent": "50",
+	"weightedAvgPrice": "0.00005438",
+	"lastPrice": "0.00009000",
+	"bidPrice": "0.00007926",
+	"askPrice": "0.00009000",
+	"openPrice": "0.00006000",
+	"highPrice": "0.00009000",
+	"lowPrice": "0.00005401",
+	"volume": "113533.21330000",
+	"total": "6.17348378",
+	"takerBuyVolume": "1000.00000000",
+	"takerBuyTotal": "0.05000000",
+	"count": 30
+}
+OR
+[{
+	"symbol": "CZRBTC",
+	"priceChange": null,
+	"priceChangePercent": null,
+	"weightedAvgPrice": null,
+	"lastPrice": null,
+	"bidPrice": null,
+	"askPrice": null,
+	"openPrice": null,
+	"highPrice": null,
+	"lowPrice": null,
+	"volume": null,
+	"total": null,
+	"takerBuyVolume": "1000.00000000",
+	"takerBuyTotal": "0.05000000",
+	"count": 0
+}]
+```
+### 24hr mini ticker price change statistics
+```
+GET /api/v1/miniticker/24hr
+```
+
+**Parameters:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ----------- | ------------
+symbol | STRING | YES |
+
+**Response:**
+
+```
+{
+	"symbol": "CZRETH",
+	"lastPrice": "0.00009000",
+	"openPrice": "0.00006000",
+	"highPrice": "0.00009000",
+	"lowPrice": "0.00005401",
+	"volume": "113533.21330000", //基础货币24小时成交量
+	"total": "0.05000000", //计价货币货币24小时成交量
+	"takerBuyVolume": "1000.00000000", //基础货币24小时流入
+	"takerBuyTotal": "0.05000000" //计价货币24小时流入
+}
+OR
+[{
+	"symbol": "CZRETH",
+	"lastPrice": "0.00009000",
+	"openPrice": "0.00006000",
+	"highPrice": "0.00009000",
+	"lowPrice": "0.00005401",
+	"volume": "113533.21330000",
+	"total": "0.05000000",
+	"takerBuyVolume": "1000.00000000",
+	"takerBuyTotal": "0.05000000"
+}]
+```
+
 
 
 
