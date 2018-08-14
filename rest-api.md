@@ -1,6 +1,6 @@
 # Public Rest API for BMBM
 # General API Information
-* The base endpoint is: **http://api.bmbm.com**
+* The base endpoint is: **https://api.bmbm.com**
 * All endpoints return either a JSON object or array.
 * All time and timestamp related fields are in milliseconds.
 * HTTP `4XX` return codes are used for for malformed requests; the issue is on the sender's side.
@@ -183,26 +183,6 @@ symbol | STRING | YES |
   "takerBuyTotal": "0.05000000",
   "count": 30
 }
-OR
-[
-  {
-   "symbol": "CZRETH",
-   "priceChange": "0.00003000",
-   "priceChangePercent": "50",
-   "weightedAvgPrice": "0.00005438",
-   "lastPrice": "0.00009000",
-   "bidPrice": "0.00007926",
-   "askPrice": "0.00009000",
-   "openPrice": "0.00006000",
-   "highPrice": "0.00009000",
-   "lowPrice": "0.00005401",
-   "volume": "113533.21330000",
-   "total": "6.17348378",
-   "takerBuyVolume": "1000.00000000",
-   "takerBuyTotal": "0.05000000",
-   "count": 30
- }
-]
 ```
 ### 24hr mini ticker price change statistics
 ```
@@ -229,20 +209,6 @@ symbol | STRING | YES |
   "takerBuyVolume": "1000.00000000", //基础货币24小时流入
   "takerBuyTotal": "0.05000000" //计价货币24小时流入
 }
-OR
-[
-  {
-    "symbol": "CZRETH",
-    "lastPrice": "0.00009000",
-    "openPrice": "0.00006000",
-    "highPrice": "0.00009000",
-    "lowPrice": "0.00005401",
-    "volume": "113533.21330000",
-    "total": "0.05000000",
-    "takerBuyVolume": "1000.00000000",
-    "takerBuyTotal": "0.05000000"
-  }
-]
 ```
 
 
