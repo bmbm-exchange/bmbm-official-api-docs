@@ -122,6 +122,35 @@ limit | INT | NO | Default 500; max 1000.
 ]
 ```
 
+### Recent trades list
+```
+GET /api/v1/aggTrades
+```
+Get compressed, aggregate trades. Trades that fill at the time, from the same order, with the same price will have the quantity aggregated.
+
+**Parameters:**
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+symbol | STRING | YES |
+limit | INT | NO | Default 500; max 1000.
+
+**Response:**
+
+```
+[
+  {
+    "a": 228182,
+    "P": "0.00007100",
+    "q": "1.23000000",
+    "f": 334625,
+    "l": 334625,
+    "T": 1532599733605,
+    "m": true
+  }
+]
+```
+
 ### Kline
 ```
 GET /api/v1/klines
